@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Document</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" ></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+
+    
+</head>
+<body>
+    <div class="container-fluid">
+        <form action="" method="POST" class="d-inline">
+            <h3 name='query-title' id='query-title'>Query params</h3>
+            <div class="input-group input-group-sm mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="inputGroup-sizing-sm">Symbol</span>
+                </div>
+                <input required type="text" class="form-control" aria-label="Symbol" aria-describedby="inputGroup-sizing-sm">
+            </div>
+
+            <div class="input-group input-group-sm mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="inputGroup-sizing-sm">Width</span>
+                </div>
+                <input required type="text" class="form-control" aria-label="Width" aria-describedby="inputGroup-sizing-sm">
+            </div>
+
+            <div class="input-group input-group-sm mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-sm">Heigh</span>
+            </div>
+            <input required type="text" class="form-control" aria-label="Heigh" aria-describedby="inputGroup-sizing-sm">
+            </div>
+            
+            <select name="intervals" id="intervals">
+                <option value="1m">1 minute</option>
+                <option value="3m">3 minutes</option>
+                <option value="5m">5 minutes</option>
+                <option value="15m">15 minutes</option>
+                <option value="30m">30 minutes</option>
+                <option value="45m">45 minutes</option>
+                <option value="1h">1 hour</option>
+                <option value="2h">2 hours</option>
+                <option value="3h">3 hours</option>
+                <option value="4h">4 hours</option>
+                <option value="1d">1 day</option>
+                <option value="1w">1 week</option>
+            </select>
+
+            <select name="theme" id="theme">
+                <option value="dark">dark</option>
+                <option value="light">light</option>
+            </select>
+
+            <!-- <div class="dropdown">
+                <button class="btn btn-info dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                  Dropdown button
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item" href="#">1 minute</a></li>
+                    <li><a class="dropdown-item" href="#">3 minutes</a></li>
+                    <li><a class="dropdown-item" href="#">5 minutes</a></li>
+                    <li><a class="dropdown-item" href="#">15 minutes</a></li>
+                    <li><a class="dropdown-item" href="#">30 minutes</a></li>
+                    <li><a class="dropdown-item" href="#">45 minutes</a></li>
+                    <li><a class="dropdown-item" href="#">1 hour</a></li>
+                    <li><a class="dropdown-item" href="#">2 hours</a></li>
+                    <li><a class="dropdown-item" href="#">3 hours</a></li>
+                    <li><a class="dropdown-item" href="#">4 hours</a></li>
+                    <li><a class="dropdown-item" href="#">1 day</a></li>
+                    <li><a class="dropdown-item" href="#">1 week</a></li>
+                </ul>
+              </div> -->
+
+            <h3 class="mt-2" name='indicators' id='indicators'>Indicators</h3>
+
+            <div class="form-group form-check">
+                <input type="checkbox" id="ATR" name="ATR">
+                <label for="ATR">ATR</label>
+
+                <input type="checkbox" id="BB" name="BB">
+                <label for="BB">BB</label>
+            </div>
+        <button type="submit" class="btn btn-success">Get</button>
+        </form>
+    </div>
+  </div>
+</body>
+</html>
