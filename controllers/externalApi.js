@@ -3,14 +3,16 @@ const axios = require('axios');
 
 const getChart = async (req, res) => {
 
+    const context = req.session.context
+
     const params = {
-        symbol: 'BINANCE:BTCUSDT',
-        interval: '1d',
-        theme: 'dark',
-        width: '800',
-        height: '600',
+        symbol: context.symbol,
+        interval: context.intervals,
+        theme: context.theme,
+        width: context.width,
+        height: context.height,
         format: 'png',
-        studies: 'MACD',
+        studies: context.studies,
         timezone: 'Etc/UTC',
         key: conf.chartImgApiKey
         }
@@ -20,8 +22,6 @@ const getChart = async (req, res) => {
         params: params
         })
         .then((data) => {
-            
-            console.log(data)
 
             const t = data.headers['content-type'];
             const d = btoa(data.data.reduce((data, byte) => data + String.fromCharCode(byte), ''))
